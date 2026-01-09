@@ -1,0 +1,608 @@
+<!-- templates/companywebsite/services.html -->
+{% extends 'companywebsite/base.html' %}
+
+{% block title %}Our Services - HVAC & Refrigeration Automation Solutions{% endblock %}
+
+{% block extra_css %}
+<style>
+    .specialization-card {
+        border: 2px solid var(--primary-blue);
+        transition: all 0.3s;
+        height: 100%;
+    }
+    
+    .specialization-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,86,179,0.2);
+    }
+    
+    .tech-badge {
+        background: rgba(0, 123, 255, 0.1);
+        border: 1px solid rgba(0, 123, 255, 0.3);
+        color: var(--primary-blue);
+        font-size: 0.8rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Hero -->
+<section class="hero-section" style="background: linear-gradient(135deg, #222 0%, #444 100%);">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold mb-4">Our Automation Services</h1>
+        <p class="lead mb-0">Specialized solutions for HVAC, refrigeration, and industrial control systems</p>
+    </div>
+</section>
+
+<!-- Specialized Services -->
+<section class="py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-10 mx-auto text-center">
+                <h2 class="section-title center">Specialized Automation Solutions</h2>
+                <p class="lead">
+                    We provide comprehensive automation services with specialized expertise 
+                    in HVAC, refrigeration, and building management systems.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Our Specializations -->
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="card specialization-card h-100">
+                    <div class="card-body p-4 text-center">
+                        <div class="card-icon mx-auto mb-3">
+                            <i class="fas fa-snowflake"></i>
+                        </div>
+                        <h4>HVAC Automation</h4>
+                        <p class="text-muted">Complete control solutions for heating, ventilation, and air conditioning systems</p>
+                        <div class="mt-3">
+                            <span class="tech-badge me-1 mb-1">VFD Control</span>
+                            <span class="tech-badge me-1 mb-1">Energy Management</span>
+                            <span class="tech-badge me-1 mb-1">BMS Integration</span>
+                            <span class="tech-badge me-1 mb-1">Chiller Control</span>
+                            <span class="tech-badge me-1 mb-1">Boiler Control</span>
+                            <span class="tech-badge mb-1">Air Handler Control</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card specialization-card h-100">
+                    <div class="card-body p-4 text-center">
+                        <div class="card-icon mx-auto mb-3">
+                            <i class="fas fa-temperature-low"></i>
+                        </div>
+                        <h4>Refrigeration Control</h4>
+                        <p class="text-muted">Specialized automation for commercial and industrial refrigeration systems</p>
+                        <div class="mt-3">
+                            <span class="tech-badge me-1 mb-1">Rack Control</span>
+                            <span class="tech-badge me-1 mb-1">Defrost Systems</span>
+                            <span class="tech-badge me-1 mb-1">Energy Recovery</span>
+                            <span class="tech-badge me-1 mb-1">Cold Storage</span>
+                            <span class="tech-badge me-1 mb-1">Supermarket Refrigeration</span>
+                            <span class="tech-badge mb-1">Process Cooling</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card specialization-card h-100">
+                    <div class="card-body p-4 text-center">
+                        <div class="card-icon mx-auto mb-3">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4>Building Automation</h4>
+                        <p class="text-muted">Complete BMS solutions for intelligent building management and control</p>
+                        <div class="mt-3">
+                            <span class="tech-badge me-1 mb-1">LOYTEC Systems</span>
+                            <span class="tech-badge me-1 mb-1">BACnet Integration</span>
+                            <span class="tech-badge me-1 mb-1">DALI Lighting</span>
+                            <span class="tech-badge me-1 mb-1">Energy Monitoring</span>
+                            <span class="tech-badge me-1 mb-1">Access Control</span>
+                            <span class="tech-badge mb-1">Fire Safety Integration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Technology Partners Section -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="section-title">Technology Partners</h3>
+                <p class="lead">Working with industry leaders to deliver reliable automation solutions</p>
+            </div>
+        </div>
+        
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="card h-100 border-primary border-2">
+                    <div class="card-body p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-3 text-center mb-3 mb-md-0">
+                                <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center"
+                                     style="width: 80px; height: 80px;">
+                                    <i class="fas fa-bolt fa-2x"></i>
+                                </div>
+                                <h6 class="mt-2 mb-0">Schneider</h6>
+                            </div>
+                            <div class="col-md-9">
+                                <h5>Schneider Electric Solutions</h5>
+                                <p class="text-muted small">Certified EcoStruxure Machine Expert Partner</p>
+                                <div class="mt-2">
+                                    <span class="badge bg-light text-dark border me-1 mb-1">Modicon M172</span>
+                                    <span class="badge bg-light text-dark border me-1 mb-1">Modicon M173</span>
+                                    <span class="badge bg-light text-dark border me-1 mb-1">M221/M241</span>
+                                    <span class="badge bg-light text-dark border mb-1">EcoStruxure</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card h-100 border-primary border-2">
+                    <div class="card-body p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-3 text-center mb-3 mb-md-0">
+                                <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center"
+                                     style="width: 80px; height: 80px;">
+                                    <i class="fas fa-cogs fa-2x"></i>
+                                </div>
+                                <h6 class="mt-2 mb-0">Danfoss</h6>
+                            </div>
+                            <div class="col-md-9">
+                                <h5>Danfoss Automation</h5>
+                                <p class="text-muted small">Specialists in Alsmart Design Solutions</p>
+                                <div class="mt-2">
+                                    <span class="badge bg-light text-dark border me-1 mb-1">AS-CX06 Lite</span>
+                                    <span class="badge bg-light text-dark border me-1 mb-1">AS-CX06 Lite+</span>
+                                    <span class="badge bg-light text-dark border me-1 mb-1">AS-CX06 Mid</span>
+                                    <span class="badge bg-light text-dark border me-1 mb-1">AS-CX06 Mid+</span>
+                                    <span class="badge bg-light text-dark border me-1 mb-1">AS-CX06 Pro</span>
+                                    <span class="badge bg-light text-dark border me-1 mb-1">AS-CX06 Pro+</span>
+                                    <span class="badge bg-light text-dark border mb-1">Alsmart Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Service Categories -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="section-title">All Our Services</h3>
+            </div>
+        </div>
+        
+        <div class="row g-4 mb-5">
+            {% for category in categories %}
+            <div class="col-md-6 col-lg-3">
+                <div class="text-center">
+                    <div class="card-icon mx-auto mb-3">
+                        <i class="{{ category.icon }}"></i>
+                    </div>
+                    <h5>{{ category.name }}</h5>
+                    {% if category.description %}
+                    <p class="small text-muted mt-2">{{ category.description }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            {% empty %}
+            <!-- Fallback categories -->
+            <div class="col-md-6 col-lg-3">
+                <div class="text-center">
+                    <div class="card-icon mx-auto mb-3">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h5>Digital Engineering</h5>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="text-center">
+                    <div class="card-icon mx-auto mb-3">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h5>Consulting</h5>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="text-center">
+                    <div class="card-icon mx-auto mb-3">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h5>Electrical Design</h5>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="text-center">
+                    <div class="card-icon mx-auto mb-3">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h5>Programming</h5>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <!-- BMS Integration Section -->
+        {% if bms_services %}
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="section-title mb-0">BMS System Integration</h3>
+                    <a href="{% url 'bms_service' %}" class="btn btn-outline-primary">
+                        View All BMS Services <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+            {% for service in bms_services|slice:":3" %}
+            <div class="col-md-4">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4">
+                        <h4 class="mb-3">
+                            {% if service.icon %}
+                            <i class="{{ service.icon }} text-primary me-2"></i>
+                            {% endif %}
+                            {{ service.title }}
+                        </h4>
+                        <p class="text-muted">{{ service.summary|truncatechars:120 }}</p>
+                        
+                        {% if service.features.all %}
+                        <ul class="list-unstyled mt-3">
+                            {% for feature in service.features.all|slice:":2" %}
+                            <li class="mb-2">
+                                <i class="{{ feature.icon|default:'fas fa-check-circle' }} text-success me-2"></i>
+                                {{ feature.text }}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                        
+                        <div class="mt-3">
+                            <a href="{% url 'bms_service' %}" class="text-primary text-decoration-none">
+                                Learn More <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        
+        <!-- Electrical Designs -->
+        {% if electrical_services %}
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="section-title">Consulting</h3>
+            </div>
+        </div>
+        
+        <div class="row g-4 mb-5">
+            {% for service in electrical_services %}
+            <div class="col-md-4">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4">
+                        <h4 class="mb-3">{{ service.title }}</h4>
+                        <p class="text-muted">{{ service.summary }}</p>
+                        <div class="mt-3">
+                            <span class="badge bg-primary me-2">NFPA</span>
+                            <span class="badge bg-primary">IEC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <!-- Fallback electrical services -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="section-title">Electrical and Fluid Designs</h3>
+            </div>
+        </div>
+        
+        <div class="row g-4 mb-5">
+            
+            
+            <div class="col-md-4">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4">
+                        <h4 class="mb-3">Control Panel Design</h4>
+                        <p class="text-muted">
+                            Design control panels for HVAC, refrigeration, 
+                            and building automation systems.
+                        </p>
+                        <div class="mt-3">
+                            <span class="badge bg-primary me-2">ePLAN</span>
+                            <span class="badge bg-primary">AutoCAD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+        {% endif %}
+        
+        <!-- Industrial Programming -->
+        {% if programming_services %}
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="section-title">Industrial Automation & Control Systems</h3>
+            </div>
+        </div>
+        
+        <div class="row g-4 mb-5">
+            {% for service in programming_services %}
+            <div class="col-md-6">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4">
+                        <h4 class="mb-3">{{ service.title }}</h4>
+                        <p class="text-muted">{{ service.summary }}</p>
+                        {% if service.show_progress_bars %}
+                        <div class="mt-3">
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar bg-success" style="width: 90%"></div>
+                            </div>
+                            <small class="text-muted">PLC Programming</small>
+                            
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar bg-info" style="width: 85%"></div>
+                            </div>
+                            <small class="text-muted">HMI Development</small>
+                            
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-warning" style="width: 80%"></div>
+                            </div>
+                            <small class="text-muted">SCADA Systems</small>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <!-- Fallback programming services -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="section-title">Industrial Programming</h3>
+            </div>
+        </div>
+        
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4">
+                        <h4 class="mb-3">PLC & HMI Development</h4>
+                        <p class="text-muted">
+                            Custom programming for HVAC, refrigeration, and building automation 
+                            systems with compliance to industry standards.
+                        </p>
+                        <div class="row mt-3">
+                            <div class="col-6">
+                                <p class="mb-1"><strong>Platforms:</strong></p>
+                                <small class="text-muted">Schneider, Danfoss, Siemens, Allen-Bradley</small>
+                            </div>
+                            <div class="col-6">
+                                <p class="mb-1"><strong>Standards:</strong></p>
+                                <small class="text-muted">IEC 61131-3, BACnet, Modbus</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4">
+                        <h4 class="mb-3">SCADA & MES Systems</h4>
+                        <p class="text-muted">
+                            Advanced monitoring and control systems for building automation, 
+                            energy management, and refrigeration control.
+                        </p>
+                        <div class="mt-3">
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar bg-success" style="width: 90%"></div>
+                            </div>
+                            <small class="text-muted">Wonderware</small>
+                            
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar bg-info" style="width: 85%"></div>
+                            </div>
+                            <small class="text-muted">Ignition</small>
+                            
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-warning" style="width: 80%"></div>
+                            </div>
+                            <small class="text-muted">FactoryTalk</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        
+        <!-- Process Table -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="section-title">Our Process</h3>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" 
+                         style="width: 80px; height: 80px;">
+                        <span class="display-6">1</span>
+                    </div>
+                    <h5>Consultation</h5>
+                    <p class="small text-muted">Requirements analysis and system planning</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" 
+                         style="width: 80px; height: 80px;">
+                        <span class="display-6">2</span>
+                    </div>
+                    <h5>Design</h5>
+                    <p class="small text-muted">System architecture and engineering</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" 
+                         style="width: 80px; height: 80px;">
+                        <span class="display-6">3</span>
+                    </div>
+                    <h5>Implementation</h5>
+                    <p class="small text-muted">Installation and programming</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" 
+                         style="width: 80px; height: 80px;">
+                        <span class="display-6">4</span>
+                    </div>
+                    <h5>Support</h5>
+                    <p class="small text-muted">Commissioning and maintenance</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Packages -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title center text-center">Technology Expertise</h2>
+        <p class="text-center lead mb-5">Partnered with industry leaders to deliver best-in-class solutions</p>
+        
+        <div class="row g-4">
+            <!-- PLC Platforms Card -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card border border-1 border-primary h-100">
+                    <div class="card-body p-4 text-center">
+                        <div class="mb-4">
+                            <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center" 
+                                 style="width: 80px; height: 80px;">
+                                <i class="fas fa-industry fa-2x"></i>
+                            </div>
+                        </div>
+                        <h5 class="mb-3">PLC Platforms</h5>
+                        <div class="mt-3">
+                            <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">Schneider</span>
+                            <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">Danfoss</span>
+                            <span class="badge bg-light text-dark border border-primary-subtle mb-2">LOYTEC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- HMI/SCADA Card -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card border border-1 border-primary h-100">
+                    <div class="card-body p-4 text-center">
+                        <div class="mb-4">
+                            <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center" 
+                                 style="width: 80px; height: 80px;">
+                                <i class="fas fa-desktop fa-2x"></i>
+                            </div>
+                        </div>
+                        <h5 class="mb-3">HMI/SCADA</h5>
+                        <div class="mt-3">
+                            <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">Wonderware</span>
+                            <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">Ignition</span>
+                            <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">FactoryTalk</span>
+                            <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">Vijeo Citect</span>
+                            <span class="badge bg-light text-dark border border-primary-subtle mb-2">WinCC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Protocols Card -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card border border-1 border-primary h-100">
+                    <div class="card-body p-4 text-center">
+                        <div class="mb-4">
+                            <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center" 
+                                 style="width: 80px; height: 80px;">
+                                <i class="fas fa-network-wired fa-2x"></i>
+                            </div>
+                        </div>
+                        <h5 class="mb-3">Communication Protocols</h5>
+                        <div class="mt-3">
+                            <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">BACnet</span>
+                            <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">Modbus</span>
+                            <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">LonWorks</span>
+                            <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">Profibus</span>
+                            <span class="badge bg-light text-dark border border-primary-subtle mb-2">Ethernet/IP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Design Tools Card -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card border border-1 border-primary h-100">
+                    <div class="card-body p-4 text-center">
+                        <div class="mb-4">
+                            <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center" 
+                                 style="width: 80px; height: 80px;">
+                                <i class="fas fa-tools fa-2x"></i>
+                            </div>
+                        </div>
+                        <h5 class="mb-3">Design Tools</h5>
+                        <div class="mt-3">
+                            <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">AutoCAD</span>
+                            <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">EPLAN</span>
+                            <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">SolidWorks</span>
+                            <span class="badge bg-light text-dark border border-primary-subtle mb-2">Alsmart Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="{% url 'bms_service' %}" class="btn btn-outline-primary me-3">
+                <i class="fas fa-building me-2"></i> View BMS Solutions
+            </a>
+            <a href="{% url 'contact' %}" class="btn btn-primary">
+                <i class="fas fa-comments me-2"></i> Get Technical Consultation
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Automate Your Operations?</h2>
+        <p class="lead mb-4">Specialized automation solutions for improved efficiency and control</p>
+        
+        <a href="{% url 'contact' %}" class="btn btn-light btn-lg px-5">
+            Contact Us <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+    </div>
+</section>
+{% endblock %}

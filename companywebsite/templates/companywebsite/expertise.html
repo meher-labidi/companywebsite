@@ -1,0 +1,84 @@
+<!-- templates/expertise.html -->
+{% extends 'companywebsite/base.html' %}
+
+{% block title %}Our Expertise{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h1 class="mb-4">Our Expertise</h1>
+    
+    <div class="row mb-5">
+        <div class="col-lg-10">
+            <p class="lead">
+                The RidgeTech team consists of talented engineers and technologists 
+                with proven experience designing and implementing control system projects.
+            </p>
+        </div>
+    </div>
+    
+    <div class="row g-4">
+        {% for exp in expertise %}
+        <div class="col-md-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title">{{ exp.title }}</h4>
+                    <p class="card-text">{{ exp.description }}</p>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Robotic Automation</h4>
+                            <p class="card-text">
+                                Offline simulations, reach studies, pre-site code development, 
+                                material handling, welding, sealants, assembly, and DCS setup.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Motion Control Systems</h4>
+                            <p class="card-text">
+                                VFD, servo setup and programming, coordinated motion applications, 
+                                line tracking systems, pumping applications, and high-speed conveyance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Smart Factory Solutions</h4>
+                            <p class="card-text">
+                                Industry 4.0 solutions, SCADA & MES systems, real-time OEE reporting, 
+                                ERP integration, downtime tracking, and remote monitoring.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Control Panels</h4>
+                            <p class="card-text">
+                                Power distribution panels, station control panels, emergency stop boxes, 
+                                explosion-proof panels, operator consoles, and certified enclosures.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

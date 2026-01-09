@@ -1,0 +1,501 @@
+<!-- Create file: templates/companywebsite/home.html -->
+{% extends 'companywebsite/base.html' %}
+{% load static %}
+{% block title %}Industrial Automation Solutions | HVAC & Refrigeration Specialists{% endblock %}
+
+{% block extra_css %}
+<style>
+    .main-hero {
+        background: linear-gradient(rgba(0, 86, 179, 0.9), rgba(0, 123, 255, 0.9)), 
+                    url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 160px 0 100px;
+    }
+    
+    .partner-logo {
+    filter: grayscale(0%);  
+    opacity: 1;  
+    transition: all 0.3s;
+    height: 60px;
+    object-fit: contain;
+}
+
+.partner-logo:hover {
+    filter: grayscale(0%);  
+    opacity: 1;
+    transform: scale(1.05);
+}
+    
+    .expertise-card {
+        border-top: 4px solid var(--primary-blue);
+        transition: all 0.3s;
+        height: 100%;
+    }
+    
+    .expertise-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,86,179,0.15);
+    }
+    
+    .stat-number {
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: var(--primary-blue);
+        line-height: 1;
+    }
+    
+    .product-badge {
+        background: rgba(0, 123, 255, 0.1);
+        border: 1px solid rgba(0, 123, 255, 0.3);
+        color: var(--primary-blue);
+    }
+    
+    .industry-card {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: 15px;
+        padding: 30px;
+        height: 100%;
+        transition: all 0.3s;
+    }
+    
+    .industry-card:hover {
+        transform: translateY(-5px);
+        background: linear-gradient(135deg, var(--primary-blue) 0%, #007bff 100%);
+        color: white;
+    }
+    
+    .industry-card:hover h5,
+    .industry-card:hover p {
+        color: white !important;
+    }
+    
+    .automation-process {
+        position: relative;
+        padding-left: 40px;
+    }
+    
+    .automation-process:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        background: var(--primary-blue);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    
+    .process-1:before { content: '1'; }
+    .process-2:before { content: '2'; }
+    .process-3:before { content: '3'; }
+    .process-4:before { content: '4'; }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Main Hero -->
+<section class="main-hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+        <h1 class="display-3 fw-bold mb-4">Industrial Automation Solutions</h1>
+        <p class="lead mb-4">
+            Specialized PLC programming, control system design, and automation solutions 
+            with expertise in HVAC & refrigeration industry.
+        </p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="{% url 'services' %}" class="btn btn-light btn-lg px-4">
+                        <i class="fas fa-cogs me-2"></i> Our Services
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="col-lg-5 mt-5 mt-lg-0">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-body p-4">
+                        <h4 class="text-center mb-4">Trusted by Industry Leaders</h4>
+                        <div class="row align-items-center g-4">
+                            <div class="col-6 text-center">
+                                <img src="{% static 'companywebsite/images/téléchargement (10).png' %}" 
+                                     alt="Schneider Electric" 
+                                     class="partner-logo w-75">
+                            </div>
+                            <div class="col-6 text-center">
+                                <img src="{% static 'companywebsite/images/téléchargement (11).png' %}" 
+                                     alt="Danfoss" 
+                                     class="partner-logo w-75">
+                            </div>
+                        </div>
+                        <p class="text-center text-muted small mt-3 mb-0">
+                            Certified Partners & Solution Providers
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Stats -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4 text-center">
+           
+            <div class="col-md-3 col-sm-6">
+                <div class="stat-card">
+                    <div class="stat-number">x+</div>
+                    <h5>Projects Completed</h5>
+                    <p class="text-muted small">Successfully delivered</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="stat-card">
+                    <div class="stat-number">98%</div>
+                    <h5>Client Retention</h5>
+                    <p class="text-muted small">Repeat business rate</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <h5>Support Available</h5>
+                    <p class="text-muted small">Emergency technical support</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Expertise -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title center text-center">Our Core Expertise</h2>
+        <p class="text-center lead mb-5">Specialized automation solutions for HVAC, refrigeration, and industrial control systems</p>
+        
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="card expertise-card">
+                    <div class="card-body p-4">
+                        <div class="card-icon mx-auto mb-3">
+                            <i class="fas fa-snowflake"></i>
+                        </div>
+                        <h4 class="text-center mb-3">HVAC Automation</h4>
+                        <p class="text-muted">
+                            Complete control solutions for heating, ventilation, and air conditioning systems. 
+                            Energy optimization, VFD control, and smart building integration.
+                        </p>
+                        <div class="mt-3">
+                            <span class="badge product-badge me-1 mb-1">BMS Integration</span>
+                            <span class="badge product-badge me-1 mb-1">VFD Control</span>
+                            <span class="badge product-badge mb-1">Energy Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="card expertise-card">
+                    <div class="card-body p-4">
+                        <div class="card-icon mx-auto mb-3">
+                            <i class="fas fa-temperature-low"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Refrigeration Control</h4>
+                        <p class="text-muted">
+                            Specialized automation for commercial and industrial refrigeration systems. 
+                            Cold storage, supermarket racks, and process cooling applications.
+                        </p>
+                        <div class="mt-3">
+                            <span class="badge product-badge me-1 mb-1">Rack Control</span>
+                            <span class="badge product-badge me-1 mb-1">Defrost Optimization</span>
+                            <span class="badge product-badge mb-1">Energy Recovery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="card expertise-card">
+                    <div class="card-body p-4">
+                        <div class="card-icon mx-auto mb-3">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h4 class="text-center mb-3">General Automation</h4>
+                        <p class="text-muted">
+                            Comprehensive industrial automation solutions including PLC programming, 
+                            HMI development, motion control, and system integration.
+                        </p>
+                        <div class="mt-3">
+                            <span class="badge product-badge me-1 mb-1">PLC Programming</span>
+                            <span class="badge product-badge me-1 mb-1">HMI/SCADA</span>
+                            <span class="badge product-badge mb-1">System Integration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technology Partners -->
+<section class="py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-title center">Technology Partnerships</h2>
+                <p class="lead">
+                    Working with industry-leading manufacturers to deliver reliable, 
+                    efficient automation solutions.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Schneider Electric Section -->
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center p-4"
+                     style="width: 200px; height: 200px;">
+                    <img src="{% static 'companywebsite/images/téléchargement (10).png' %}" 
+                         alt="Schneider Electric" 
+                        style="max-width: 160px; background: white; padding: 10px; border-radius: 8px;">
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <h3>Schneider Electric Solutions</h3>
+                <p class="lead mb-3">
+                    Certified EcoStruxure Machine Expert Partner
+                </p>
+                <p>
+                    We specialize in Schneider Electric automation solutions, providing expert programming, 
+                    configuration, and support for their complete product range.
+                </p>
+                
+                <h5 class="mt-4 mb-3">Our Schneider Electric Expertise:</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>PLC & Controllers:</h6>
+                        <div class="d-flex flex-wrap gap-2 mt-2">
+                            <span class="badge bg-light text-dark border">Modicon M172</span>
+                            <span class="badge bg-light text-dark border">Modicon M173</span>
+                            <span class="badge bg-light text-dark border">M221/M241</span>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Software & Platforms:</h6>
+                        <div class="d-flex flex-wrap gap-2 mt-2">
+                            <span class="badge bg-light text-dark border">EcoStruxure Machine Expert</span>
+                            
+                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Danfoss Section -->
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h3>Danfoss Automation</h3>
+                <p class="lead mb-3">
+                    Specialists in Danfoss Alsmart Design Solutions
+                </p>
+                <p>
+                    We provide complete Danfoss automation solutions for refrigeration and HVAC applications, 
+                    leveraging their advanced control technology for optimal performance and energy efficiency.
+                </p>
+                
+                <h5 class="mt-4 mb-3">Our Danfoss Expertise:</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Refrigeration Controls:</h6>
+                        <div class="d-flex flex-wrap gap-2 mt-2">
+                            <span class="badge bg-light text-dark border">AS-CX06 Lite</span>
+                            <span class="badge bg-light text-dark border">AS-CX06 Mid</span>
+                            <span class="badge bg-light text-dark border">AS-CX06 Mid+</span>
+                            <span class="badge bg-light text-dark border">AS-CX06 Pro</span>
+                            <span class="badge bg-light text-dark border">AS-CX06 Pro+</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Software & Tools:</h6>
+                        <div class="d-flex flex-wrap gap-2 mt-2">
+                            <span class="badge bg-light text-dark border">Alsmart Design</span>
+                            <span class="badge bg-light text-dark border">CoolSelector2</span>
+                            <span class="badge bg-light text-dark border">Service Tool</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center mt-5 mt-lg-0">
+                <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center p-4"
+                     style="width: 200px; height: 200px;">
+                    <img src="{% static 'companywebsite/images/téléchargement (11).png' %}" 
+                         alt="Danfoss" 
+                         style="max-width: 160px; background: white; padding: 10px; border-radius: 8px;">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Other Partners -->
+        <!-- In home.html, update the entire "We Also Work With" section -->
+<div class="row mt-5 pt-5">
+    <div class="col-12">
+        <h4 class="text-center mb-4">We Also Work With:</h4>
+        <div class="row justify-content-center">
+            <!-- LOYTEC only -->
+            <div class="col-auto">
+                <div class="bg-light rounded p-3 text-center" style="width: 120px;">
+                    <i class="fas fa-microchip fa-2x text-primary mb-2"></i>
+                    <h6 class="mb-0">LOYTEC</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+
+<!-- Industries We Serve -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title center text-center">Industries We Serve</h2>
+        
+        <div class="row g-4 mt-4">
+            <div class="col-md-4">
+                <div class="industry-card">
+                    <div class="mb-3">
+                        <i class="fas fa-shopping-cart fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-3">Supermarkets & Retail</h5>
+                    <p class="text-muted mb-0">
+                        Refrigeration rack control, energy management, and remote monitoring 
+                        for supermarket chains and retail refrigeration.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="industry-card">
+                    <div class="mb-3">
+                        <i class="fas fa-warehouse fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-3">Cold Storage & Logistics</h5>
+                    <p class="text-muted mb-0">
+                        Automated cold storage facilities, warehouse control systems, 
+                        and distribution center automation.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="industry-card">
+                    <div class="mb-3">
+                        <i class="fas fa-building fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-3">Commercial Buildings</h5>
+                    <p class="text-muted mb-0">
+                        HVAC control, building management systems, and energy optimization 
+                        for office buildings and commercial complexes.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="industry-card">
+                    <div class="mb-3">
+                        <i class="fas fa-industry fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-3">Food Processing</h5>
+                    <p class="text-muted mb-0">
+                        Process cooling, refrigeration systems, and automation solutions 
+                        for food and beverage manufacturing.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="industry-card">
+                    <div class="mb-3">
+                        <i class="fas fa-hospital fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-3">Healthcare Facilities</h5>
+                    <p class="text-muted mb-0">
+                        Critical environment control, HVAC systems, and medical refrigeration 
+                        for hospitals and clinics.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="industry-card">
+                    <div class="mb-3">
+                        <i class="fas fa-graduation-cap fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-3">Education & Government</h5>
+                    <p class="text-muted mb-0">
+                        Campus-wide building automation, energy management, and 
+                        facility control systems.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Process -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title center text-center">Our Automation Process</h2>
+        
+        <div class="row mt-5">
+            <div class="col-lg-3 col-md-6">
+                <div class="automation-process process-1 mb-4 mb-md-0">
+                    <h5>Consultation & Analysis</h5>
+                    <p class="text-muted">Understanding your requirements and system analysis</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="automation-process process-2 mb-4 mb-md-0">
+                    <h5>System Design</h5>
+                    <p class="text-muted">Architecture design and component selection</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="automation-process process-3 mb-4 mb-md-0">
+                    <h5>Programming & Integration</h5>
+                    <p class="text-muted">PLC programming, HMI development, and system integration</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="automation-process process-4">
+                    <h5>Commissioning & Support</h5>
+                    <p class="text-muted">Testing, training, and ongoing maintenance support</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Automate Your Operations?</h2>
+        <p class="lead mb-4">Specialized automation solutions for HVAC, refrigeration, and industrial control systems</p>
+        
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+            
+            <a href="{% url 'services' %}" class="btn btn-outline-light btn-lg px-5">
+                <i class="fas fa-cogs me-2"></i> View All Services
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

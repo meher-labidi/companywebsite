@@ -1,0 +1,478 @@
+<!-- Create file: templates/companywebsite/bms_service.html -->
+{% extends 'companywebsite/base.html' %}
+
+{% block title %}BMS Systems - Smart Building Management Solutions{% endblock %}
+
+{% block extra_css %}
+<style>
+    .bms-hero {
+        background: linear-gradient(rgba(0, 86, 179, 0.9), rgba(0, 123, 255, 0.9)), 
+                    url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 120px 0;
+    }
+    
+    .protocol-badge {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        margin: 3px;
+    }
+    
+    .benefit-card {
+        border-left: 4px solid var(--primary-blue);
+        transition: all 0.3s;
+    }
+    
+    .benefit-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,86,179,0.15);
+    }
+    
+    .service-step {
+        position: relative;
+        padding-left: 30px;
+    }
+    
+    .service-step:before {
+        content: counter(step);
+        counter-increment: step;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: var(--primary-blue);
+        color: white;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bms-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold mb-4">Building Management System (BMS)</h1>
+                <p class="lead mb-0">
+                    We provide smart BMS solutions tailored for HVAC and refrigeration systems, 
+                    helping buildings reduce energy consumption, improve system control, 
+                    and enhance safety & security.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What is BMS -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="section-title">What is a Building Management System?</h2>
+                <p class="lead">
+                    A Building Management System (BMS) is a centralized, computer-based platform that monitors, 
+                    controls, and optimizes a building's mechanical and electrical systems.
+                </p>
+                <p>
+                    It enables real-time management of HVAC, refrigeration, lighting, power, fire safety, 
+                    and security systems, ensuring efficient, reliable, and sustainable building operation.
+                </p>
+                <p>
+                    Modern BMS solutions support open standards and Internet-based protocols such as:
+                </p>
+                <div class="mt-3">
+                    <span class="badge bg-primary me-2 mb-2">BACnet</span>
+                    <span class="badge bg-primary me-2 mb-2">LonWorks</span>
+                    <span class="badge bg-primary me-2 mb-2">Modbus</span>
+                    <span class="badge bg-primary me-2 mb-2">DeviceNet</span>
+                    <span class="badge bg-primary me-2 mb-2">SOAP</span>
+                    <span class="badge bg-primary mb-2">XML</span>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-4 mt-lg-0">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-body p-4">
+                        <div class="ratio ratio-16x9">
+                            <div class="bg-primary d-flex align-items-center justify-content-center text-white rounded">
+                                <div class="text-center p-4">
+                                    <i class="fas fa-brain fa-3x mb-3"></i>
+                                    <h4>Centralized Control</h4>
+                                    <p class="mb-0">Single platform for all building systems</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Smart Building Automation -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title center text-center">Smart Building Automation and Benefits</h2>
+        <p class="text-center lead mb-5">
+            Modern BMS creates intelligent, responsive environments that enhance comfort, 
+            efficiency, and sustainability.
+        </p>
+        
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card benefit-card h-100">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                                 style="width: 50px; height: 50px;">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div>
+                                <h5>Energy Optimization</h5>
+                                <p class="text-muted mb-0">
+                                    Advanced sensors and IoT connectivity optimize energy use, 
+                                    reduce waste, and provide real-time insights for informed decision-making.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card benefit-card h-100">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                                 style="width: 50px; height: 50px;">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <h5>Enhanced Safety & Security</h5>
+                                <p class="text-muted mb-0">
+                                    Remote surveillance, automated access control, and predictive 
+                                    maintenance alerts improve safety and convenience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card benefit-card h-100">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                                 style="width: 50px; height: 50px;">
+                                <i class="fas fa-user-friends"></i>
+                            </div>
+                            <div>
+                                <h5>Occupant Comfort</h5>
+                                <p class="text-muted mb-0">
+                                    Automatic adjustment of conditions based on occupancy, weather, 
+                                    or operational schedules for optimal comfort.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card benefit-card h-100">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                                 style="width: 50px; height: 50px;">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div>
+                                <h5>Operational Efficiency</h5>
+                                <p class="text-muted mb-0">
+                                    Extends equipment life, lowers operational costs, and supports 
+                                    sustainability goals through intelligent automation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our BMS Services -->
+<section class="py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-10 mx-auto text-center">
+                <h2 class="section-title center">Our BMS Services</h2>
+                <p class="lead">
+                    We deliver end-to-end Building Management System solutions designed for 
+                    residential and commercial facilities. From planning to operation, we help 
+                    your building achieve peak energy efficiency, safety, and comfort.
+                </p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="counter-reset">
+                    <div class="service-step mb-4">
+                        <h5>System Design & Planning</h5>
+                        <p class="text-muted mb-0">Assessing your facility's requirements to develop a tailored BMS strategy.</p>
+                    </div>
+                    
+                    <div class="service-step mb-4">
+                        <h5>Integration & Automation</h5>
+                        <p class="text-muted mb-0">Uniting HVAC/R systems under a single Intelligent Platform.</p>
+                    </div>
+                    
+                    <div class="service-step mb-4">
+                        <h5>Procurement & Installation</h5>
+                        <p class="text-muted mb-0">Supplying high-quality components and professionally installing them for dependable performance.</p>
+                    </div>
+                    
+                    <div class="service-step mb-4">
+                        <h5>Monitoring & Control</h5>
+                        <p class="text-muted mb-0">Centralized dashboards for real-time monitoring, alerts, and efficient resource management.</p>
+                    </div>
+                    
+                    <div class="service-step mb-4">
+                        <h5>Commissioning & Validation</h5>
+                        <p class="text-muted mb-0">Thorough testing, balancing, and compliance verification to ensure optimal operation.</p>
+                    </div>
+                    
+                    <div class="service-step">
+                        <h5>Maintenance & Lifecycle Support</h5>
+                        <p class="text-muted mb-0">Continuous optimization and preventive maintenance plans for maximum reliability and energy savings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <div class="alert alert-info" style="max-width: 800px; margin: 0 auto;">
+                <h5 class="alert-heading">Whether you have a BMS or not, we have solutions for you!</h5>
+                <p class="mb-0">Take the next step toward smarter, more efficient building management.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technology Partners -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title center text-center">Technology Partners & Products</h2>
+        <p class="text-center lead mb-5">Working with industry leaders to deliver reliable BMS solutions</p>
+        
+        <div class="row g-4">
+            <!-- LOYTEC Special Focus -->
+            <div class="col-lg-6">
+                <div class="card border-primary border-2 h-100">
+                    <div class="card-body p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-3 text-center mb-3 mb-md-0">
+                                <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center"
+                                     style="width: 80px; height: 80px;">
+                                    <i class="fas fa-microchip fa-2x"></i>
+                                </div>
+                                <h5 class="mt-3 mb-0">LOYTEC</h5>
+                            </div>
+                            <div class="col-md-9">
+                                <h4 class="text-primary">Our Preferred BMS Partner</h4>
+                                <p class="mb-3">Specialized in building automation and control solutions</p>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h6 class="small text-primary">Featured Products:</h6>
+                                        <ul class="list-unstyled text-muted small">
+                                            <li><i class="fas fa-check text-success me-1"></i> LIOB-589</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> L-DALI</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> L-ROC</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> L-WEB</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <h6 class="small text-primary">Key Features:</h6>
+                                        <ul class="list-unstyled text-muted small">
+                                            <li><i class="fas fa-check text-success me-1"></i> IP-based architecture</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> Open protocol support</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> Scalable solutions</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> Web-based management</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Other Partners -->
+            <div class="col-lg-6">
+                <div class="card h-100">
+                    <div class="card-body p-4">
+                        <h5 class="mb-4">Other Technology Partners</h5>
+                        <div class="row">
+                            <div class="col-6 mb-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-light rounded-circle d-flex align-items-center justify-content-center me-3"
+                                         style="width: 50px; height: 50px;">
+                                        <i class="fas fa-industry text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">Danfoss</h6>
+                                        <small class="text-muted">Alsmart Series</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-light rounded-circle d-flex align-items-center justify-content-center me-3"
+                                         style="width: 50px; height: 50px;">
+                                        <i class="fas fa-building text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">LOYTEC</h6>
+                                        <small class="text-muted">Enterprise Buildings</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-light rounded-circle d-flex align-items-center justify-content-center me-3"
+                                         style="width: 50px; height: 50px;">
+                                        <i class="fas fa-bolt text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">Schneider</h6>
+                                        <small class="text-muted">EcoStruxure Building</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-light rounded-circle d-flex align-items-center justify-content-center me-3"
+                                         style="width: 50px; height: 50px;">
+                                        <i class="fas fa-fire text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">Johnson Controls</h6>
+                                        <small class="text-muted">Metasys, OpenBlue</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h2 class="mb-3">Take control of your building's efficiency and performance</h2>
+                <p class="lead mb-0">
+                    Get in touch with our experts today to learn how our solutions can enhance 
+                    comfort, safety, and energy management.
+                </p>
+            </div>
+            <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                <a href="{% url 'contact' %}?service=bms" class="btn btn-light btn-lg px-5">
+                    <i class="fas fa-comments me-2"></i> Contact Us
+                </a>
+                <div class="mt-3">
+                    <small>Or call: <strong>+1 (555) 123-4567</strong></small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Applications -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title center text-center">Building Applications</h2>
+        
+        <div class="row g-4 mt-4">
+            <div class="col-md-3 col-sm-6">
+                <div class="card text-center h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                             style="width: 70px; height: 70px;">
+                            <i class="fas fa-city fa-2x"></i>
+                        </div>
+                        <h5>Commercial Offices</h5>
+                        <p class="text-muted small">Energy optimization for office buildings</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-sm-6">
+                <div class="card text-center h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                             style="width: 70px; height: 70px;">
+                            <i class="fas fa-hospital fa-2x"></i>
+                        </div>
+                        <h5>Healthcare Facilities</h5>
+                        <p class="text-muted small">Critical environment control</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-sm-6">
+                <div class="card text-center h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                             style="width: 70px; height: 70px;">
+                            <i class="fas fa-shopping-cart fa-2x"></i>
+                        </div>
+                        <h5>Retail & Malls</h5>
+                        <p class="text-muted small">HVAC and lighting management</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-sm-6">
+                <div class="card text-center h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                             style="width: 70px; height: 70px;">
+                            <i class="fas fa-graduation-cap fa-2x"></i>
+                        </div>
+                        <h5>Educational Institutions</h5>
+                        <p class="text-muted small">Campus-wide building management</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Initialize counter for service steps
+    document.addEventListener('DOMContentLoaded', function() {
+        const counterContainer = document.querySelector('.counter-reset');
+        if (counterContainer) {
+            counterContainer.style.counterReset = 'step 0';
+        }
+    });
+</script>
+{% endblock %}
