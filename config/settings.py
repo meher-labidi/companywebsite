@@ -131,8 +131,8 @@ EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-EMAIL_HOST_USER = "abidim283@gmail.com"
-EMAIL_HOST_PASSWORD = "xxpj whxd idgl zqpz"
+EMAIL_HOST_USER = "your email"
+EMAIL_HOST_PASSWORD = "password"
 
-DEFAULT_FROM_EMAIL = "abidim283@gmail.com"
-NOTIFY_EMAIL = "abidim283@gmail.com"
+DEFAULT_FROM_EMAIL = "your email"
+NOTIFY_EMAIL = "your email"
