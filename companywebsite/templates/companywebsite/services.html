@@ -1,10 +1,47 @@
 <!-- templates/companywebsite/services.html -->
 {% extends 'companywebsite/base.html' %}
+{% load static %}
 
 {% block title %}Our Services - HVAC & Refrigeration Automation Solutions{% endblock %}
 
 {% block extra_css %}
 <style>
+    .hero-section {
+        color: white;
+        padding: 100px 0;
+        position: relative;
+        overflow: hidden;
+        background: transparent;
+    }
+    
+    .hero-section .video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        pointer-events: none;
+    }
+    
+    .hero-section::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+        pointer-events: none;
+    }
+    
+    .hero-section .container {
+        position: relative;
+        z-index: 1;
+    }
+    
     .specialization-card {
         border: 2px solid var(--primary-blue);
         transition: all 0.3s;
@@ -26,8 +63,12 @@
 {% endblock %}
 
 {% block content %}
-<!-- Hero -->
-<section class="hero-section" style="background: linear-gradient(135deg, #222 0%, #444 100%);">
+<!-- Hero with Video Background -->
+<section class="hero-section">
+    <video class="video-background" autoplay muted loop playsinline>
+        <source src="{% static 'companywebsite/videos/istockphoto-2108474954-640_adpp_is.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <div class="container text-center">
         <h1 class="display-4 fw-bold mb-4">Our Automation Services</h1>
         <p class="lead mb-0">Specialized solutions for HVAC, refrigeration, and industrial control systems</p>
@@ -41,7 +82,7 @@
             <div class="col-lg-10 mx-auto text-center">
                 <h2 class="section-title center">Specialized Automation Solutions</h2>
                 <p class="lead">
-                    We provide comprehensive automation services with specialized expertise 
+                    ControlPro provides comprehensive automation services with specialized expertise 
                     in HVAC, refrigeration, and building management systems.
                 </p>
             </div>
@@ -281,61 +322,6 @@
         </div>
         {% endif %}
         
-        <!-- Electrical Designs -->
-        {% if electrical_services %}
-        <div class="row mb-5">
-            <div class="col-12">
-                <h3 class="section-title">Consulting</h3>
-            </div>
-        </div>
-        
-        <div class="row g-4 mb-5">
-            {% for service in electrical_services %}
-            <div class="col-md-4">
-                <div class="card service-card h-100">
-                    <div class="card-body p-4">
-                        <h4 class="mb-3">{{ service.title }}</h4>
-                        <p class="text-muted">{{ service.summary }}</p>
-                        <div class="mt-3">
-                            <span class="badge bg-primary me-2">NFPA</span>
-                            <span class="badge bg-primary">IEC</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        {% else %}
-        <!-- Fallback electrical services -->
-        <div class="row mb-5">
-            <div class="col-12">
-                <h3 class="section-title">Electrical and Fluid Designs</h3>
-            </div>
-        </div>
-        
-        <div class="row g-4 mb-5">
-            
-            
-            <div class="col-md-4">
-                <div class="card service-card h-100">
-                    <div class="card-body p-4">
-                        <h4 class="mb-3">Control Panel Design</h4>
-                        <p class="text-muted">
-                            Design control panels for HVAC, refrigeration, 
-                            and building automation systems.
-                        </p>
-                        <div class="mt-3">
-                            <span class="badge bg-primary me-2">ePLAN</span>
-                            <span class="badge bg-primary">AutoCAD</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-        </div>
-        {% endif %}
-        
         <!-- Industrial Programming -->
         {% if programming_services %}
         <div class="row mb-5">
@@ -490,7 +476,7 @@
     </div>
 </section>
 
-<!-- Service Packages -->
+<!-- Technology Expertise -->
 <section class="py-5 bg-light">
     <div class="container">
         <h2 class="section-title center text-center">Technology Expertise</h2>
@@ -529,11 +515,7 @@
                         </div>
                         <h5 class="mb-3">HMI/SCADA</h5>
                         <div class="mt-3">
-                            <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">Wonderware</span>
                             <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">Ignition</span>
-                            <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">FactoryTalk</span>
-                            <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">Vijeo Citect</span>
-                            <span class="badge bg-light text-dark border border-primary-subtle mb-2">WinCC</span>
                         </div>
                     </div>
                 </div>
@@ -573,9 +555,7 @@
                         </div>
                         <h5 class="mb-3">Design Tools</h5>
                         <div class="mt-3">
-                            <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">AutoCAD</span>
-                            <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">EPLAN</span>
-                            <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">SolidWorks</span>
+                            <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">EcoStruxure Machine Expert - HVAC</span>
                             <span class="badge bg-light text-dark border border-primary-subtle mb-2">Alsmart Design</span>
                         </div>
                     </div>

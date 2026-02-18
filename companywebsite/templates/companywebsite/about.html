@@ -1,17 +1,40 @@
 <!-- templates/about.html -->
 {% extends 'companywebsite/base.html' %}
+{% load static %}
 
 {% block title %}About Us - Industrial Automation Specialists{% endblock %}
 
 {% block extra_css %}
 <style>
     .about-hero {
-        background: linear-gradient(rgba(0, 86, 179, 0.9), rgba(0, 123, 255, 0.9)), 
-                    url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');
-        background-size: cover;
-        background-position: center;
         color: white;
         padding: 140px 0 80px;
+        position: relative;
+        overflow: hidden;
+        background: transparent;
+    }
+    
+    .about-hero .video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        pointer-events: none;
+    }
+    
+    .about-hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+        pointer-events: none;
     }
     
     .advantage-card {
@@ -33,10 +56,14 @@
 {% endblock %}
 
 {% block content %}
-<!-- Hero -->
+<!-- Hero with Video Background -->
 <section class="about-hero">
+    <video class="video-background" autoplay muted loop playsinline>
+        <source src="{% static 'companywebsite/videos/istockphoto-2108474954-640_adpp_is.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <div class="container text-center">
-        <h1 class="display-4 fw-bold mb-4">About Our Company</h1>
+        <h1 class="display-4 fw-bold mb-4">About ControlPro</h1>
         <p class="lead mb-0">Specialized in HVAC & Refrigeration Automation Solutions</p>
     </div>
 </section>
@@ -49,7 +76,7 @@
                 <h2 class="section-title">Our Story</h2>
                 <p class="lead">
                     Founded with a vision to revolutionize industrial automation in the HVAC and refrigeration industry, 
-                    we have grown into a trusted partner for commercial and industrial automation solutions.
+                    ControlPro has grown into a trusted partner for commercial and industrial automation solutions.
                 </p>
                 
                 <p>
@@ -122,77 +149,52 @@
                 </div>
             </div>
             
-            <!-- In about.html, replace the entire "Company At a Glance" card (col-lg-4 section) -->
-<div class="col-lg-4 mt-5 mt-lg-0">
-    <div class="card shadow-lg border-0" style="background: linear-gradient(135deg, #0056b3 0%, #007bff 100%); color: white;">
-        <div class="card-body p-4">
-            <h4 class="card-title mb-4 text-white">Company At a Glance</h4>
-            
-            <div class="mb-4">
-                <div class="d-flex justify-content-between mb-2">
-                    <span class="fw-semibold">Founded:</span>
-                    <span>202x</span>
-                </div>
-                <div class="progress" style="height: 6px;">
-                    <div class="progress-bar" style="background-color: rgba(255,255,255,0.7); width: 100%"></div>
-                </div>
-            </div>
-            
-            <div class="mb-4">
-                <div class="d-flex justify-content-between mb-2">
-                    <span class="fw-semibold">Projects Completed:</span>
-                    <span>x+</span>
-                </div>
-                <div class="progress" style="height: 6px;">
-                    <div class="progress-bar" style="background-color: rgba(255,255,255,0.7); width: 100%"></div>
-                </div>
-            </div>
-            
-            <div class="mb-4">
-                <div class="d-flex justify-content-between mb-2">
-                    <span class="fw-semibold">Client Retention:</span>
-                    <span>95%</span>
-                </div>
-                <div class="progress" style="height: 6px;">
-                    <div class="progress-bar" style="background-color: rgba(255,255,255,0.7); width: 95%"></div>
-                </div>
-            </div>
-            
-            <div class="mb-4">
-                <div class="d-flex justify-content-between mb-2">
-                    <span class="fw-semibold">Energy Savings:</span>
-                    <span>Up to 40%</span>
-                </div>
-                <div class="progress" style="height: 6px;">
-                    <div class="progress-bar bg-success" style="width: 40%"></div>
+            <div class="col-lg-4 mt-5 mt-lg-0">
+                <div class="card shadow-lg border-0" style="background: linear-gradient(135deg, #0056b3 0%, #007bff 100%); color: white;">
+                    <div class="card-body p-4">
+                        <h4 class="card-title mb-4 text-white">ControlPro At a Glance</h4>
+                        
+                       
+                        
+                        
+                        
+                        
+                        
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="fw-semibold">Energy Savings:</span>
+                                
+                            </div>
+                            <div class="progress" style="height: 6px;">
+                                <div class="progress-bar bg-success" style="width: 40%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h5 class="text-white">Technology Partners</h5>
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <span class="badge bg-white text-primary py-2 px-3">
+                                    <i class="fas fa-bolt me-1"></i> Schneider
+                                </span>
+                                <span class="badge bg-white text-primary py-2 px-3">
+                                    <i class="fas fa-cogs me-1"></i> Danfoss
+                                </span>
+                                <span class="badge bg-white text-primary py-2 px-3">
+                                    <i class="fas fa-microchip me-1"></i> LOYTEC
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="mt-4">
-                <h5 class="text-white">Technology Partners</h5>
-                <div class="d-flex flex-wrap gap-2 mt-3">
-                    <span class="badge bg-white text-primary py-2 px-3">
-                        <i class="fas fa-bolt me-1"></i> Schneider
-                    </span>
-                    <span class="badge bg-white text-primary py-2 px-3">
-                        <i class="fas fa-cogs me-1"></i> Danfoss
-                    </span>
-                    <span class="badge bg-white text-primary py-2 px-3">
-                        <i class="fas fa-microchip me-1"></i> LOYTEC
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
         </div>
     </div>
 </section>
 
-<!-- Why Choose Us Section (Replacing Team Section) -->
+<!-- Why Choose Us Section -->
 <section class="py-5 bg-light">
     <div class="container">
-        <h2 class="section-title center text-center">Why Choose Us</h2>
+        <h2 class="section-title center text-center">Why Choose ControlPro</h2>
         <p class="text-center lead mb-5">Expertise that makes the difference in HVAC and refrigeration automation</p>
         
         <div class="row g-4">
@@ -319,60 +321,52 @@
     </div>
 </section>
 
-<!-- Industries We Serve -->
+<!-- Industrial & Commercial Section -->
 <section class="py-5">
     <div class="container">
-        <h2 class="section-title center text-center">Industries We Serve</h2>
+        <h2 class="section-title center text-center">Industrial & Commercial</h2>
         
         <div class="row g-4 mt-4">
-            <div class="col-md-3 col-sm-6">
-                <div class="card text-center h-100 border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                             style="width: 70px; height: 70px;">
-                            <i class="fas fa-shopping-cart fa-2x"></i>
-                        </div>
-                        <h5 class="mb-3">Supermarkets</h5>
-                        <p class="text-muted small mb-0">Refrigeration rack control and energy management for retail chains</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-3 col-sm-6">
-                <div class="card text-center h-100 border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                             style="width: 70px; height: 70px;">
-                            <i class="fas fa-warehouse fa-2x"></i>
-                        </div>
-                        <h5 class="mb-3">Cold Storage</h5>
-                        <p class="text-muted small mb-0">Automated warehouse and distribution center refrigeration</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-3 col-sm-6">
+            <!-- Industrial Section -->
+            <div class="col-md-6">
                 <div class="card text-center h-100 border-0 shadow-sm">
                     <div class="card-body p-4">
                         <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
                              style="width: 70px; height: 70px;">
                             <i class="fas fa-industry fa-2x"></i>
                         </div>
-                        <h5 class="mb-3">Food Processing</h5>
-                        <p class="text-muted small mb-0">Process cooling and refrigeration for food manufacturing</p>
+                        <h5 class="mb-3">Industrial</h5>
+                        <p class="text-muted small mb-3">
+                            PLC programming, control system design, and automation solutions 
+                            for manufacturing plants and production facilities.
+                        </p>
+                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                            <span class="badge bg-primary">Manufacturing</span>
+                            <span class="badge bg-primary">Process Control</span>
+                            <span class="badge bg-primary">Production Lines</span>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <div class="col-md-3 col-sm-6">
+            <!-- Commercial Section -->
+            <div class="col-md-6">
                 <div class="card text-center h-100 border-0 shadow-sm">
                     <div class="card-body p-4">
                         <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
                              style="width: 70px; height: 70px;">
-                            <i class="fas fa-city fa-2x"></i>
+                            <i class="fas fa-building fa-2x"></i>
                         </div>
                         <h5 class="mb-3">Commercial Buildings</h5>
-                        <p class="text-muted small mb-0">HVAC and building automation for offices and complexes</p>
+                        <p class="text-muted small mb-3">
+                            HVAC control, building management systems, and energy optimization 
+                            for office buildings and commercial complexes.
+                        </p>
+                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                            <span class="badge bg-primary">HVAC Control</span>
+                            <span class="badge bg-primary">BMS</span>
+                            <span class="badge bg-primary">Energy Optimization</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -396,7 +390,7 @@
                                     <i class="fas fa-microchip text-primary me-3"></i>
                                     <div>
                                         <h6 class="mb-0">PLC Programming</h6>
-                                        <small class="text-muted">Schneider, Danfoss, Siemens</small>
+                                        <small class="text-muted">Schneider, Danfoss</small>
                                     </div>
                                 </div>
                             </div>
@@ -405,7 +399,7 @@
                                     <i class="fas fa-desktop text-primary me-3"></i>
                                     <div>
                                         <h6 class="mb-0">HMI/SCADA</h6>
-                                        <small class="text-muted">Wonderware, Ignition, Vijeo</small>
+                                        <small class="text-muted">Ignition</small>
                                     </div>
                                 </div>
                             </div>
@@ -414,7 +408,7 @@
                                     <i class="fas fa-network-wired text-primary me-3"></i>
                                     <div>
                                         <h6 class="mb-0">Communication</h6>
-                                        <small class="text-muted">BACnet, Modbus, LonWorks</small>
+                                        <small class="text-muted">BACnet, Modbus, Profibus,Ethernet/IP</small>
                                     </div>
                                 </div>
                             </div>
@@ -423,7 +417,7 @@
                                     <i class="fas fa-building text-primary me-3"></i>
                                     <div>
                                         <h6 class="mb-0">BMS Systems</h6>
-                                        <small class="text-muted">LOYTEC, Siemens, Honeywell</small>
+                                        <small class="text-muted">LOYTEC</small>
                                     </div>
                                 </div>
                             </div>
@@ -432,7 +426,7 @@
                                     <i class="fas fa-tools text-primary me-3"></i>
                                     <div>
                                         <h6 class="mb-0">Design Software</h6>
-                                        <small class="text-muted">EPLAN, AutoCAD, Alsmart</small>
+                                        <small class="text-muted">EcoStruxure Machine Expert - HVAC, Alsmart Design</small>
                                     </div>
                                 </div>
                             </div>
@@ -515,7 +509,7 @@
 <!-- CTA -->
 <section class="py-5 bg-primary text-white">
     <div class="container text-center">
-        <h2 class="mb-4">Partner with Automation Experts</h2>
+        <h2 class="mb-4">Partner with ControlPro Automation Experts</h2>
         <p class="lead mb-4">Let us help you optimize your HVAC and refrigeration systems</p>
         <div class="d-flex flex-wrap justify-content-center gap-3">
             <a href="{% url 'contact' %}" class="btn btn-light btn-lg px-5">
