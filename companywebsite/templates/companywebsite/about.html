@@ -52,6 +52,122 @@
         background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         border: 2px solid var(--primary-blue);
     }
+    
+    /* Service Area Styles */
+    .service-area-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    }
+    
+    .region-card {
+        background: white;
+        border-radius: 15px;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(0,86,179,0.1);
+    }
+    
+    .region-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0,86,179,0.1);
+        border-color: var(--primary-blue);
+    }
+    
+    .region-title {
+        color: var(--primary-blue);
+        font-size: 1.5rem;
+        font-weight: 600;
+        border-bottom: 2px solid var(--primary-blue);
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .city-badge {
+        background: #e9ecef;
+        color: #2c3e50;
+        padding: 8px 16px;
+        border-radius: 30px;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        border: 1px solid transparent;
+    }
+    
+    .city-badge:hover {
+        background: var(--primary-blue);
+        color: white;
+        transform: scale(1.05);
+        border-color: var(--primary-blue);
+    }
+    
+.country-tag {
+    position: absolute;
+    top: 15px;
+    right: -5px;
+    background: var(--primary-blue);
+    color: white;
+    padding: 8px 25px 8px 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    z-index: 10;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+}
+
+.country-tag::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 0 solid transparent;
+    border-top: 8px solid #003d80;
+}
+    
+    .service-stats {
+        background: linear-gradient(135deg, #0056b3 0%, #007bff 100%);
+        border-radius: 15px;
+        padding: 30px;
+        color: white;
+        margin-top: 40px;
+    }
+    
+    .stat-item {
+        text-align: center;
+        border-right: 1px solid rgba(255,255,255,0.3);
+    }
+    
+    .stat-item:last-child {
+        border-right: none;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+    
+    .stat-label {
+        font-size: 1rem;
+        opacity: 0.9;
+    }
+    
+    @media (max-width: 768px) {
+        .stat-item {
+            border-right: none;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
 </style>
 {% endblock %}
 
@@ -154,12 +270,6 @@
                     <div class="card-body p-4">
                         <h4 class="card-title mb-4 text-white">ControlPro At a Glance</h4>
                         
-                       
-                        
-                        
-                        
-                        
-                        
                         <div class="mb-4">
                             <div class="d-flex justify-content-between mb-2">
                                 <span class="fw-semibold">Energy Savings:</span>
@@ -174,7 +284,7 @@
                             <h5 class="text-white">Technology Partners</h5>
                             <div class="d-flex flex-wrap gap-2 mt-3">
                                 <span class="badge bg-white text-primary py-2 px-3">
-                                    <i class="fas fa-bolt me-1"></i> Schneider
+                                    <i class="fas fa-bolt me-1"></i> Schneider Electric
                                 </span>
                                 <span class="badge bg-white text-primary py-2 px-3">
                                     <i class="fas fa-cogs me-1"></i> Danfoss
@@ -187,6 +297,69 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- NEW: Service Area Section -->
+<section class="py-5 service-area-section">
+    <div class="container">
+        <h2 class="section-title center text-center">Our Service Area</h2>
+        <p class="text-center lead mb-5">Proudly serving clients across Canada</p>
+        
+        <div class="row g-4">
+            <!-- Greater Toronto Area -->
+            <div class="col-lg-4">
+                <div class="card region-card h-100 border-0 shadow-sm position-relative overflow-hidden">
+                    <div class="card-body p-4">
+                        <span class="country-tag">CANADA</span>
+                        <h3 class="region-title">Greater Toronto Area</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="city-badge">Toronto</span>
+                            <span class="city-badge">Mississauga</span>
+                            <span class="city-badge">Brampton</span>
+                            <span class="city-badge">Markham</span>
+                            <span class="city-badge">Vaughan</span>
+                            <span class="city-badge">Oakville</span>
+                            <span class="city-badge">Richmond Hill</span>
+                            <span class="city-badge">Oshawa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Southwestern Ontario -->
+            <div class="col-lg-4">
+                <div class="card region-card h-100 border-0 shadow-sm position-relative overflow-hidden">
+                    <div class="card-body p-4">
+                        <span class="country-tag">CANADA</span>
+                        <h3 class="region-title">Southwestern Ontario</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="city-badge">Hamilton</span>
+                            <span class="city-badge">Kitchener</span>
+                            <span class="city-badge">Guelph</span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        
+            
+            
+            
+            
+        </div>
+        
+       
+        
+        <!-- Service Area Note -->
+        <div class="text-center mt-4">
+            <p class="text-muted">
+                <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                Don't see your city? Contact us - we may still be able to serve you!
+            </p>
         </div>
     </div>
 </section>
@@ -321,58 +494,154 @@
     </div>
 </section>
 
-<!-- Industrial & Commercial Section -->
-<section class="py-5">
+<!-- Industries We Serve -->
+<section class="py-5 bg-light">
     <div class="container">
-        <h2 class="section-title center text-center">Industrial & Commercial</h2>
+        <h2 class="section-title center text-center">Industries We Serve</h2>
+        <p class="text-center lead mb-5">Specialized automation solutions across diverse industrial sectors</p>
         
-        <div class="row g-4 mt-4">
-            <!-- Industrial Section -->
-            <div class="col-md-6">
-                <div class="card text-center h-100 border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                             style="width: 70px; height: 70px;">
-                            <i class="fas fa-industry fa-2x"></i>
-                        </div>
-                        <h5 class="mb-3">Industrial</h5>
-                        <p class="text-muted small mb-3">
-                            PLC programming, control system design, and automation solutions 
-                            for manufacturing plants and production facilities.
-                        </p>
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
-                            <span class="badge bg-primary">Manufacturing</span>
-                            <span class="badge bg-primary">Process Control</span>
-                            <span class="badge bg-primary">Production Lines</span>
-                        </div>
+        <div class="row g-4">
+            <!-- Agri-Business -->
+            <div class="col-md-6 col-lg-4">
+                <div class="industry-card h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-tractor fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-3">Agri-Business</h5>
+                    <p class="text-muted small mb-3">
+                        Agriculture is rapidly evolving with automation playing a key role in addressing challenges like population growth, urbanization, and climate change. Smart farming solutions are essential for modern agricultural success.
+                    </p>
+                    <p class="text-muted small mb-3">
+                        We deliver automation expertise across the agricultural value chain – from greenhouse control systems and grain handling to milling operations and biogas production. Our team integrates process control, conveyance systems, and product tracking from farm to consumer, helping you reduce costs, maximize quality, and increase production efficiency.
+                    </p>
+                    <div class="mt-2">
+                        <span class="badge bg-primary me-1 mb-1">Greenhouse Automation</span>
+                        <span class="badge bg-primary me-1 mb-1">Grain Handling</span>
+                        <span class="badge bg-primary me-1 mb-1">Milling Operations</span>
+                        <span class="badge bg-primary me-1 mb-1">Biogas Production</span>
+                        <span class="badge bg-primary mb-1">Process Control</span>
                     </div>
                 </div>
             </div>
             
-            <!-- Commercial Section -->
-            <div class="col-md-6">
-                <div class="card text-center h-100 border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                             style="width: 70px; height: 70px;">
-                            <i class="fas fa-building fa-2x"></i>
-                        </div>
-                        <h5 class="mb-3">Commercial Buildings</h5>
-                        <p class="text-muted small mb-3">
-                            HVAC control, building management systems, and energy optimization 
-                            for office buildings and commercial complexes.
-                        </p>
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
-                            <span class="badge bg-primary">HVAC Control</span>
-                            <span class="badge bg-primary">BMS</span>
-                            <span class="badge bg-primary">Energy Optimization</span>
-                        </div>
+            <!-- Food & Beverage -->
+            <div class="col-md-6 col-lg-4">
+                <div class="industry-card h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-utensils fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-3">Food & Beverage</h5>
+                    <p class="text-muted small mb-3">
+                        The food and beverage industry is rapidly embracing automation to address labor shortages and increase production efficiency. As facilities struggle to find qualified operators, automated solutions have become essential for maintaining competitiveness.
+                    </p>
+                    <p class="text-muted small mb-3">
+                        We specialize in integrating diverse machinery from global manufacturers onto unified production lines. Our expertise includes hygienic design, sanitary environments, and strict food safety protocols. We seamlessly connect batching systems, check weighers, x-ray and metal detection equipment, packaging machines, and palletizing systems – ensuring complete traceability and operational harmony.
+                    </p>
+                    <div class="mt-2">
+                        <span class="badge bg-primary me-1 mb-1">Hygienic Design</span>
+                        <span class="badge bg-primary me-1 mb-1">Batching Systems</span>
+                        <span class="badge bg-primary me-1 mb-1">Check Weighers</span>
+                        <span class="badge bg-primary me-1 mb-1">Metal Detection</span>
+                        <span class="badge bg-primary mb-1">Packaging Integration</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Packaging and Palletizing -->
+            <div class="col-md-6 col-lg-4">
+                <div class="industry-card h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-boxes fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-3">Packaging and Palletizing</h5>
+                    <p class="text-muted small mb-3">
+                        Packaging and palletizing automation delivers substantial cost savings and quality improvements across virtually every manufacturing sector. These systems are critical components of modern production lines.
+                    </p>
+                    <p class="text-muted small mb-3">
+                        We design control strategies for automated packaging and palletizing systems that prioritize safety and flexibility for products of all shapes and sizes. Our solutions integrate area safety scanners, RFID and bar code readers, and vision-guided robots – providing reliable, adaptable automation for both manufacturing and distribution environments.
+                    </p>
+                    <div class="mt-2">
+                        <span class="badge bg-primary me-1 mb-1">Vision Guided Robots</span>
+                        <span class="badge bg-primary me-1 mb-1">RFID Integration</span>
+                        <span class="badge bg-primary me-1 mb-1">Safety Scanners</span>
+                        <span class="badge bg-primary me-1 mb-1">Bar Code Readers</span>
+                        <span class="badge bg-primary mb-1">Palletizing Systems</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pharmaceutical / Life Sciences -->
+            <div class="col-md-6 col-lg-4">
+                <div class="industry-card h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-flask fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-3">Pharmaceutical / Life Sciences</h5>
+                    <p class="text-muted small mb-3">
+                        Automation is transforming life sciences manufacturing, driven by aging populations and increasing demand for efficient healthcare solutions. Robotics and automated systems provide critical advantages in production volume and product traceability.
+                    </p>
+                    <p class="text-muted small mb-3">
+                        We integrate complete production lines for pharmaceutical, biotech, and consumer health clients – whether new installations or existing line upgrades. Our experience spans form-fill-seal machines, weigh systems, sterilizers, leak detectors, and packaging equipment from diverse manufacturers. We create unified control systems that make disparate machinery appear seamless to your operators.
+                    </p>
+                    <div class="mt-2">
+                        <span class="badge bg-primary me-1 mb-1">Form-Fill-Seal</span>
+                        <span class="badge bg-primary me-1 mb-1">Sterilizers</span>
+                        <span class="badge bg-primary me-1 mb-1">Leak Detectors</span>
+                        <span class="badge bg-primary me-1 mb-1">Weigh Systems</span>
+                        <span class="badge bg-primary mb-1">Traceability</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Marine -->
+            <div class="col-md-6 col-lg-4">
+                <div class="industry-card h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-ship fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-3">Marine</h5>
+                    <p class="text-muted small mb-3">
+                        Marine operations demand robust, precise automation that performs reliably in harsh environments. From energy efficiency to onboard systems and digital connectivity, every component must be optimized for performance and safety.
+                    </p>
+                    <p class="text-muted small mb-3">
+                        We partner with ship designers and marine engineers to develop advanced control and alarm monitoring systems tailored to vessel requirements. Our solutions include robust automation, sensor integration, and industrial networking designed for shipboard conditions. We provide end-to-end support – from system design and programming to data visualization and commissioning – helping build smarter, more efficient vessels.
+                    </p>
+                    <div class="mt-2">
+                        <span class="badge bg-primary me-1 mb-1">Alarm Monitoring</span>
+                        <span class="badge bg-primary me-1 mb-1">Sensor Integration</span>
+                        <span class="badge bg-primary me-1 mb-1">Shipboard Networks</span>
+                        <span class="badge bg-primary me-1 mb-1">Data Visualization</span>
+                        <span class="badge bg-primary mb-1">Vessel Automation</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Water & Wastewater -->
+            <div class="col-md-6 col-lg-4">
+                <div class="industry-card h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-water fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-3">Water & Wastewater</h5>
+                    <p class="text-muted small mb-3">
+                        Water and wastewater facilities require dependable automation to manage critical infrastructure, maintain regulatory compliance, and protect public health. System reliability and data accuracy are non-negotiable in this sector.
+                    </p>
+                    <p class="text-muted small mb-3">
+                        We deliver automation solutions for municipalities, utilities, and private operators built for 24/7 performance. Our expertise includes SCADA systems, PLC controls, remote monitoring, and industrial networking specifically designed for water applications. We help clients optimize operations, reduce maintenance costs, and gain real-time visibility into pumping stations, treatment facilities, and distribution networks.
+                    </p>
+                    <div class="mt-2">
+                        <span class="badge bg-primary me-1 mb-1">SCADA Systems</span>
+                        <span class="badge bg-primary me-1 mb-1">Remote Monitoring</span>
+                        <span class="badge bg-primary me-1 mb-1">Pumping Stations</span>
+                        <span class="badge bg-primary me-1 mb-1">Treatment Facilities</span>
+                        <span class="badge bg-primary mb-1">Regulatory Compliance</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 
 <!-- Technology Expertise -->
 <section class="py-5 bg-light">
@@ -390,7 +659,7 @@
                                     <i class="fas fa-microchip text-primary me-3"></i>
                                     <div>
                                         <h6 class="mb-0">PLC Programming</h6>
-                                        <small class="text-muted">Schneider, Danfoss</small>
+                                        <small class="text-muted">Schneider Electric, Danfoss</small>
                                     </div>
                                 </div>
                             </div>
@@ -408,7 +677,7 @@
                                     <i class="fas fa-network-wired text-primary me-3"></i>
                                     <div>
                                         <h6 class="mb-0">Communication</h6>
-                                        <small class="text-muted">BACnet, Modbus, Profibus,Ethernet/IP</small>
+                                        <small class="text-muted">BACnet, Modbus, Profibus, MQTT,OPC UA</small>
                                     </div>
                                 </div>
                             </div>

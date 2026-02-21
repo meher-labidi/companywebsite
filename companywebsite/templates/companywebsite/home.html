@@ -72,6 +72,27 @@
         background: rgba(0, 123, 255, 0.1);
         border: 1px solid rgba(0, 123, 255, 0.3);
         color: var(--primary-blue);
+        display: inline-block;
+        padding: 0.4rem 0.8rem;
+        margin: 0.2rem;
+        border-radius: 30px;
+        font-size: 0.85rem;
+        transition: all 0.2s;
+    }
+    
+    .product-badge:hover {
+        background: var(--primary-blue);
+        color: white;
+        transform: scale(1.05);
+    }
+    
+    .compact-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 20px 0;
+        box-shadow: 0 5px 20px rgba(0,86,179,0.1);
+        border-left: 5px solid var(--primary-blue);
     }
     
     .industry-card {
@@ -132,10 +153,10 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-7">
-                <h1 class="display-3 fw-bold mb-4">Industrial Automation Solutions</h1>
+                <h1 class="display-3 fw-bold mb-4">Industrial Automation and Control Solution</h1>
                 <p class="lead mb-4">
                     Specialized PLC programming, control system design, and automation solutions 
-                    with expertise in HVAC & refrigeration industry.
+                    with expertise in refrigeration industry & HVAC.
                 </p>
                 <div class="d-flex flex-wrap gap-3">
                     <a href="{% url 'services' %}" class="btn btn-light btn-lg px-4">
@@ -160,7 +181,7 @@
                             </div>
                         </div>
                         <p class="text-center text-muted small mt-3 mb-0">
-                            Schneider Ecostruxure & Danfoss Alsamart Specialists
+                            Schneider Electric Ecostruxure & Danfoss Alsamart Specialists
                         </p>
                     </div>
                 </div>
@@ -191,48 +212,37 @@
         <h2 class="section-title center text-center">Our Core Expertise</h2>
         <p class="text-center lead mb-5">Specialized automation solutions for HVAC, refrigeration, and industrial control systems</p>
         
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-                <div class="card expertise-card">
-                    <div class="card-body p-4">
-                        <div class="card-icon mx-auto mb-3">
-                            <i class="fas fa-snowflake"></i>
-                        </div>
-                        <h4 class="text-center mb-3">HVAC Automation</h4>
-                        <p class="text-muted">
-                            Complete control solutions for heating, ventilation, and air conditioning systems. 
-                            Energy optimization, VFD control, and smart building integration.
-                        </p>
-                        <div class="mt-3">
-                            <span class="badge product-badge me-1 mb-1">BMS Integration</span>
-                            <span class="badge product-badge me-1 mb-1">VFD Control</span>
-                            <span class="badge product-badge mb-1">Energy Management</span>
-                        </div>
+        <div class="row">
+            <!-- Combined Refrigeration/HVAC Expertise - Compact Version -->
+            <div class="col-lg-8 mx-auto mb-4">
+                <div class="compact-section">
+                    <h3 class="text-center mb-3">
+                        <i class="fas fa-temperature-low text-primary me-2"></i>
+                        Refrigeration/HVAC Automation & Control
+                    </h3>
+                    <p class="text-center text-muted mb-4">
+                        Complete automation solutions for heating, ventilation, air conditioning, and refrigeration systems
+                    </p>
+                    
+                    <div class="badge-group text-center">
+                        <span class="product-badge">BMS Integration</span>
+                        <span class="product-badge">VFD Control</span>
+                        <span class="product-badge">Energy Management</span>
+                        <span class="product-badge">Chiller Control</span>
+                        <span class="product-badge">Boiler Control</span>
+                        <span class="product-badge">Air Handler Control</span>
+                        <span class="product-badge">Rack Control</span>
+                        <span class="product-badge">Defrost Optimization</span>
+                        <span class="product-badge">Energy Recovery</span>
+                        <span class="product-badge">Cold Storage</span>
+                        <span class="product-badge">Supermarket Refrigeration</span>
+                        <span class="product-badge">Process Cooling</span>
                     </div>
                 </div>
             </div>
             
-            <div class="col-lg-4 col-md-6">
-                <div class="card expertise-card">
-                    <div class="card-body p-4">
-                        <div class="card-icon mx-auto mb-3">
-                            <i class="fas fa-temperature-low"></i>
-                        </div>
-                        <h4 class="text-center mb-3">Refrigeration Control</h4>
-                        <p class="text-muted">
-                            Specialized automation for commercial and industrial refrigeration systems. 
-                            Cold storage, supermarket racks, and process cooling applications.
-                        </p>
-                        <div class="mt-3">
-                            <span class="badge product-badge me-1 mb-1">Rack Control</span>
-                            <span class="badge product-badge me-1 mb-1">Defrost Optimization</span>
-                            <span class="badge product-badge mb-1">Energy Recovery</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6">
+            <!-- General Automation Card -->
+            <div class="col-lg-6 col-md-6 mx-auto">
                 <div class="card expertise-card">
                     <div class="card-body p-4">
                         <div class="card-icon mx-auto mb-3">
@@ -243,7 +253,7 @@
                             Comprehensive industrial automation solutions including PLC programming, 
                             HMI development, motion control, and system integration.
                         </p>
-                        <div class="mt-3">
+                        <div class="mt-3 text-center">
                             <span class="badge product-badge me-1 mb-1">PLC Programming</span>
                             <span class="badge product-badge me-1 mb-1">HMI/SCADA</span>
                             <span class="badge product-badge mb-1">System Integration</span>
@@ -352,64 +362,151 @@
             </div>
         </div>
         
-        <!-- Other Partners -->
-        <div class="row mt-5 pt-5">
-            <div class="col-12">
-                <h4 class="text-center mb-4">We Also Work With:</h4>
-                <div class="row justify-content-center">
-                    <!-- LOYTEC only -->
-                    <div class="col-auto">
-                        <div class="bg-light rounded p-3 text-center" style="width: 120px;">
-                            <i class="fas fa-microchip fa-2x text-primary mb-2"></i>
-                            <h6 class="mb-0">LOYTEC</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </div>
 </section>
 
-<!-- Industrial & Commercial Section -->
+<!-- Industries We Serve -->
 <section class="py-5 bg-light">
     <div class="container">
-        <h2 class="section-title center text-center">Industrial & Commercial</h2>
+        <h2 class="section-title center text-center">Industries We Serve</h2>
+        <p class="text-center lead mb-5">Specialized automation solutions across diverse industrial sectors</p>
         
-        <div class="row g-4 mt-4">
-            <!-- Industrial Section -->
-            <div class="col-md-6">
-                <div class="industry-card">
+        <div class="row g-4">
+            <!-- Agri-Business -->
+            <div class="col-md-6 col-lg-4">
+                <div class="industry-card h-100">
                     <div class="mb-3">
-                        <i class="fas fa-industry fa-2x text-primary"></i>
+                        <i class="fas fa-tractor fa-2x text-primary"></i>
                     </div>
-                    <h5 class="mb-3">Industrial</h5>
-                    <p class="text-muted mb-0">
-                        PLC programming, control system design, and automation solutions 
-                        for manufacturing plants, process industries, and production facilities.
+                    <h5 class="mb-3">Agri-Business</h5>
+                    <p class="text-muted small mb-3">
+                        Agriculture is rapidly evolving with automation playing a key role in addressing challenges like population growth, urbanization, and climate change. Smart farming solutions are essential for modern agricultural success.
                     </p>
-                    <div class="mt-3">
-                        <span class="badge bg-primary me-2">Manufacturing</span>
-                        <span class="badge bg-primary me-2">Process Control</span>
-                        <span class="badge bg-primary">Production Lines</span>
+                    <p class="text-muted small mb-3">
+                        We deliver automation expertise across the agricultural value chain – from greenhouse control systems and grain handling to milling operations and biogas production. Our team integrates process control, conveyance systems, and product tracking from farm to consumer, helping you reduce costs, maximize quality, and increase production efficiency.
+                    </p>
+                    <div class="mt-2">
+                        <span class="badge bg-primary me-1 mb-1">Greenhouse Automation</span>
+                        <span class="badge bg-primary me-1 mb-1">Grain Handling</span>
+                        <span class="badge bg-primary me-1 mb-1">Milling Operations</span>
+                        <span class="badge bg-primary me-1 mb-1">Biogas Production</span>
+                        <span class="badge bg-primary mb-1">Process Control</span>
                     </div>
                 </div>
             </div>
             
-            <!-- Commercial Section -->
-            <div class="col-md-6">
-                <div class="industry-card">
+            <!-- Food & Beverage -->
+            <div class="col-md-6 col-lg-4">
+                <div class="industry-card h-100">
                     <div class="mb-3">
-                        <i class="fas fa-building fa-2x text-primary"></i>
+                        <i class="fas fa-utensils fa-2x text-primary"></i>
                     </div>
-                    <h5 class="mb-3">Commercial Buildings</h5>
-                    <p class="text-muted mb-0">
-                        HVAC control, building management systems, and energy optimization 
-                        for office buildings and commercial complexes.
+                    <h5 class="mb-3">Food & Beverage</h5>
+                    <p class="text-muted small mb-3">
+                        The food and beverage industry is rapidly embracing automation to address labor shortages and increase production efficiency. As facilities struggle to find qualified operators, automated solutions have become essential for maintaining competitiveness.
                     </p>
-                    <div class="mt-3">
-                        <span class="badge bg-primary me-2">HVAC Control</span>
-                        <span class="badge bg-primary me-2">BMS</span>
-                        <span class="badge bg-primary">Energy Optimization</span>
+                    <p class="text-muted small mb-3">
+                        We specialize in integrating diverse machinery from global manufacturers onto unified production lines. Our expertise includes hygienic design, sanitary environments, and strict food safety protocols. We seamlessly connect batching systems, check weighers, x-ray and metal detection equipment, packaging machines, and palletizing systems – ensuring complete traceability and operational harmony.
+                    </p>
+                    <div class="mt-2">
+                        <span class="badge bg-primary me-1 mb-1">Hygienic Design</span>
+                        <span class="badge bg-primary me-1 mb-1">Batching Systems</span>
+                        <span class="badge bg-primary me-1 mb-1">Check Weighers</span>
+                        <span class="badge bg-primary me-1 mb-1">Metal Detection</span>
+                        <span class="badge bg-primary mb-1">Packaging Integration</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Packaging and Palletizing -->
+            <div class="col-md-6 col-lg-4">
+                <div class="industry-card h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-boxes fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-3">Packaging and Palletizing</h5>
+                    <p class="text-muted small mb-3">
+                        Packaging and palletizing automation delivers substantial cost savings and quality improvements across virtually every manufacturing sector. These systems are critical components of modern production lines.
+                    </p>
+                    <p class="text-muted small mb-3">
+                        We design control strategies for automated packaging and palletizing systems that prioritize safety and flexibility for products of all shapes and sizes. Our solutions integrate area safety scanners, RFID and bar code readers, and vision-guided robots – providing reliable, adaptable automation for both manufacturing and distribution environments.
+                    </p>
+                    <div class="mt-2">
+                        <span class="badge bg-primary me-1 mb-1">Vision Guided Robots</span>
+                        <span class="badge bg-primary me-1 mb-1">RFID Integration</span>
+                        <span class="badge bg-primary me-1 mb-1">Safety Scanners</span>
+                        <span class="badge bg-primary me-1 mb-1">Bar Code Readers</span>
+                        <span class="badge bg-primary mb-1">Palletizing Systems</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pharmaceutical / Life Sciences -->
+            <div class="col-md-6 col-lg-4">
+                <div class="industry-card h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-flask fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-3">Pharmaceutical / Life Sciences</h5>
+                    <p class="text-muted small mb-3">
+                        Automation is transforming life sciences manufacturing, driven by aging populations and increasing demand for efficient healthcare solutions. Robotics and automated systems provide critical advantages in production volume and product traceability.
+                    </p>
+                    <p class="text-muted small mb-3">
+                        We integrate complete production lines for pharmaceutical, biotech, and consumer health clients – whether new installations or existing line upgrades. Our experience spans form-fill-seal machines, weigh systems, sterilizers, leak detectors, and packaging equipment from diverse manufacturers. We create unified control systems that make disparate machinery appear seamless to your operators.
+                    </p>
+                    <div class="mt-2">
+                        <span class="badge bg-primary me-1 mb-1">Form-Fill-Seal</span>
+                        <span class="badge bg-primary me-1 mb-1">Sterilizers</span>
+                        <span class="badge bg-primary me-1 mb-1">Leak Detectors</span>
+                        <span class="badge bg-primary me-1 mb-1">Weigh Systems</span>
+                        <span class="badge bg-primary mb-1">Traceability</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Marine -->
+            <div class="col-md-6 col-lg-4">
+                <div class="industry-card h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-ship fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-3">Marine</h5>
+                    <p class="text-muted small mb-3">
+                        Marine operations demand robust, precise automation that performs reliably in harsh environments. From energy efficiency to onboard systems and digital connectivity, every component must be optimized for performance and safety.
+                    </p>
+                    <p class="text-muted small mb-3">
+                        We partner with ship designers and marine engineers to develop advanced control and alarm monitoring systems tailored to vessel requirements. Our solutions include robust automation, sensor integration, and industrial networking designed for shipboard conditions. We provide end-to-end support – from system design and programming to data visualization and commissioning – helping build smarter, more efficient vessels.
+                    </p>
+                    <div class="mt-2">
+                        <span class="badge bg-primary me-1 mb-1">Alarm Monitoring</span>
+                        <span class="badge bg-primary me-1 mb-1">Sensor Integration</span>
+                        <span class="badge bg-primary me-1 mb-1">Shipboard Networks</span>
+                        <span class="badge bg-primary me-1 mb-1">Data Visualization</span>
+                        <span class="badge bg-primary mb-1">Vessel Automation</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Water & Wastewater -->
+            <div class="col-md-6 col-lg-4">
+                <div class="industry-card h-100">
+                    <div class="mb-3">
+                        <i class="fas fa-water fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-3">Water & Wastewater</h5>
+                    <p class="text-muted small mb-3">
+                        Water and wastewater facilities require dependable automation to manage critical infrastructure, maintain regulatory compliance, and protect public health. System reliability and data accuracy are non-negotiable in this sector.
+                    </p>
+                    <p class="text-muted small mb-3">
+                        We deliver automation solutions for municipalities, utilities, and private operators built for 24/7 performance. Our expertise includes SCADA systems, PLC controls, remote monitoring, and industrial networking specifically designed for water applications. We help clients optimize operations, reduce maintenance costs, and gain real-time visibility into pumping stations, treatment facilities, and distribution networks.
+                    </p>
+                    <div class="mt-2">
+                        <span class="badge bg-primary me-1 mb-1">SCADA Systems</span>
+                        <span class="badge bg-primary me-1 mb-1">Remote Monitoring</span>
+                        <span class="badge bg-primary me-1 mb-1">Pumping Stations</span>
+                        <span class="badge bg-primary me-1 mb-1">Treatment Facilities</span>
+                        <span class="badge bg-primary mb-1">Regulatory Compliance</span>
                     </div>
                 </div>
             </div>

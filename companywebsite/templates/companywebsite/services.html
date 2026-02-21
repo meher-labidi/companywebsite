@@ -57,7 +57,35 @@
         background: rgba(0, 123, 255, 0.1);
         border: 1px solid rgba(0, 123, 255, 0.3);
         color: var(--primary-blue);
-        font-size: 0.8rem;
+        font-size: 0.85rem;
+        display: inline-block;
+        padding: 0.4rem 0.8rem;
+        margin: 0.2rem;
+        border-radius: 30px;
+        transition: all 0.2s;
+    }
+    
+    .tech-badge:hover {
+        background: var(--primary-blue);
+        color: white;
+        transform: scale(1.05);
+    }
+    
+    .compact-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 20px 0 40px;
+        box-shadow: 0 5px 20px rgba(0,86,179,0.1);
+        border-left: 5px solid var(--primary-blue);
+    }
+    
+    .badge-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 20px;
     }
 </style>
 {% endblock %}
@@ -88,49 +116,39 @@
             </div>
         </div>
         
-        <!-- Our Specializations -->
+        <!-- Combined Refrigeration/HVAC Section - Compact Version -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10">
+                <div class="compact-section">
+                    <h3 class="text-center mb-3">
+                        <i class="fas fa-temperature-low text-primary me-2"></i>
+                        Refrigeration/HVAC Automation & Control
+                    </h3>
+                    <p class="text-center text-muted mb-4">
+                        Complete automation solutions for heating, ventilation, air conditioning, and refrigeration systems
+                    </p>
+                    
+                    <div class="badge-group">
+                        <span class="tech-badge">BMS Integration</span>
+                        <span class="tech-badge">VFD Control</span>
+                        <span class="tech-badge">Energy Management</span>
+                        <span class="tech-badge">Chiller Control</span>
+                        <span class="tech-badge">Boiler Control</span>
+                        <span class="tech-badge">Air Handler Control</span>
+                        <span class="tech-badge">Rack Control</span>
+                        <span class="tech-badge">Defrost Optimization</span>
+                        <span class="tech-badge">Energy Recovery</span>
+                        <span class="tech-badge">Cold Storage</span>
+                        <span class="tech-badge">Supermarket Refrigeration</span>
+                        <span class="tech-badge">Process Cooling</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Building Automation -->
         <div class="row g-4 mb-5">
-            <div class="col-md-4">
-                <div class="card specialization-card h-100">
-                    <div class="card-body p-4 text-center">
-                        <div class="card-icon mx-auto mb-3">
-                            <i class="fas fa-snowflake"></i>
-                        </div>
-                        <h4>HVAC Automation</h4>
-                        <p class="text-muted">Complete control solutions for heating, ventilation, and air conditioning systems</p>
-                        <div class="mt-3">
-                            <span class="tech-badge me-1 mb-1">VFD Control</span>
-                            <span class="tech-badge me-1 mb-1">Energy Management</span>
-                            <span class="tech-badge me-1 mb-1">BMS Integration</span>
-                            <span class="tech-badge me-1 mb-1">Chiller Control</span>
-                            <span class="tech-badge me-1 mb-1">Boiler Control</span>
-                            <span class="tech-badge mb-1">Air Handler Control</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4">
-                <div class="card specialization-card h-100">
-                    <div class="card-body p-4 text-center">
-                        <div class="card-icon mx-auto mb-3">
-                            <i class="fas fa-temperature-low"></i>
-                        </div>
-                        <h4>Refrigeration Control</h4>
-                        <p class="text-muted">Specialized automation for commercial and industrial refrigeration systems</p>
-                        <div class="mt-3">
-                            <span class="tech-badge me-1 mb-1">Rack Control</span>
-                            <span class="tech-badge me-1 mb-1">Defrost Systems</span>
-                            <span class="tech-badge me-1 mb-1">Energy Recovery</span>
-                            <span class="tech-badge me-1 mb-1">Cold Storage</span>
-                            <span class="tech-badge me-1 mb-1">Supermarket Refrigeration</span>
-                            <span class="tech-badge mb-1">Process Cooling</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4 mx-auto">
                 <div class="card specialization-card h-100">
                     <div class="card-body p-4 text-center">
                         <div class="card-icon mx-auto mb-3">
@@ -495,9 +513,9 @@
                         </div>
                         <h5 class="mb-3">PLC Platforms</h5>
                         <div class="mt-3">
-                            <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">Schneider</span>
+                            <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">Schneider Electric</span>
                             <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">Danfoss</span>
-                            <span class="badge bg-light text-dark border border-primary-subtle mb-2">LOYTEC</span>
+                            <span class="badge bg-light text-dark border border-primary-subtle mb-2">Delta</span>
                         </div>
                     </div>
                 </div>
@@ -537,7 +555,8 @@
                             <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">Modbus</span>
                             <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">LonWorks</span>
                             <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">Profibus</span>
-                            <span class="badge bg-light text-dark border border-primary-subtle mb-2">Ethernet/IP</span>
+                            <span class="badge bg-light text-dark border border-primary-subtle mb-2">MQTT</span>
+                            <span class="badge bg-light text-dark border border-primary-subtle mb-2">OPC UA</span>
                         </div>
                     </div>
                 </div>
@@ -557,6 +576,7 @@
                         <div class="mt-3">
                             <span class="badge bg-light text-dark border border-primary-subtle me-2 mb-2">EcoStruxure Machine Expert - HVAC</span>
                             <span class="badge bg-light text-dark border border-primary-subtle mb-2">Alsmart Design</span>
+                            <span class="badge bg-light text-dark border border-primary-subtle mb-2">DIAStudio</span>
                         </div>
                     </div>
                 </div>
