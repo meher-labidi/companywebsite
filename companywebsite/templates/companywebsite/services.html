@@ -389,55 +389,6 @@
             {% endfor %}
         </div>
         
-        <!-- BMS Integration Section -->
-        {% if bms_services %}
-        <div class="row mb-5">
-            <div class="col-12">
-                <div class="d-flex justify-content-between align-items-center">
-                    <h3 class="section-title mb-0">BMS System Integration</h3>
-                    <a href="{% url 'bms_service' %}" class="btn btn-outline-primary">
-                        View All BMS Services <i class="fas fa-arrow-right ms-2"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="row g-4 mb-5">
-            {% for service in bms_services|slice:":3" %}
-            <div class="col-md-4">
-                <div class="card service-card h-100">
-                    <div class="card-body p-4">
-                        <h4 class="mb-3">
-                            {% if service.icon %}
-                            <i class="{{ service.icon }} text-primary me-2"></i>
-                            {% endif %}
-                            {{ service.title }}
-                        </h4>
-                        <p class="text-muted">{{ service.summary|truncatechars:120 }}</p>
-                        
-                        {% if service.features.all %}
-                        <ul class="list-unstyled mt-3">
-                            {% for feature in service.features.all|slice:":2" %}
-                            <li class="mb-2">
-                                <i class="{{ feature.icon|default:'fas fa-check-circle' }} text-success me-2"></i>
-                                {{ feature.text }}
-                            </li>
-                            {% endfor %}
-                        </ul>
-                        {% endif %}
-                        
-                        <div class="mt-3">
-                            <a href="{% url 'bms_service' %}" class="text-primary text-decoration-none">
-                                Learn More <i class="fas fa-arrow-right ms-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        {% endif %}
-        
         <!-- Industrial Programming -->
         {% if programming_services %}
         <div class="row mb-5">
@@ -682,9 +633,6 @@
         </div>
         
         <div class="text-center mt-5">
-            <a href="{% url 'bms_service' %}" class="btn btn-outline-primary me-3">
-                <i class="fas fa-building me-2"></i> View BMS Solutions
-            </a>
             <a href="{% url 'contact' %}" class="btn btn-primary">
                 <i class="fas fa-comments me-2"></i> Get Technical Consultation
             </a>

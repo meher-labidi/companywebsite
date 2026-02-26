@@ -1,6 +1,6 @@
 
 from django.urls import path
-from companywebsite.views import home, about, services, ContactView,SuccesView,bms_service
+from companywebsite.views import home, about, services, ContactView,SuccesView
 
 urlpatterns = [
 
@@ -9,5 +9,5 @@ urlpatterns = [
     path('services/', services, name='services'),
     path('contact/', ContactView.as_view(), name='contact'),
     path("success/", SuccesView.as_view(), name="success"),
-    path('services/bms/', bms_service, name='bms_service'),  
+    
 ]
