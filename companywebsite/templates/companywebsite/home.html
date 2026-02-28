@@ -1,7 +1,7 @@
 <!-- Create file: templates/companywebsite/home.html -->
 {% extends 'companywebsite/base.html' %}
 {% load static %}
-{% block title %}Industrial Automation Solutions | HVAC & Refrigeration Specialists{% endblock %}
+{% block title %}Industrial Automation Solutions | Refrigeration & HVAC Specialists{% endblock %}
 
 {% block extra_css %}
 <style>
@@ -180,7 +180,7 @@
                             </div>
                         </div>
                         <p class="text-center text-muted small mt-3 mb-0">
-                            Schneider Electric Ecostruxure & Danfoss Alsamart Specialists
+                            Schneider Electric Ecostruxure & Danfoss Alsmart Specialists
                         </p>
                     </div>
                 </div>
@@ -264,139 +264,72 @@
     </div>
 </section>
 
-<!-- Technology Partners -->
-<section class="py-5">
-    <div class="container">
-        <div class="row mb-5">
-            <div class="col-lg-8 mx-auto text-center">
-                <h2 class="section-title center">Technology Partnerships</h2>
-                <p class="lead">
-                    Working with industry-leading manufacturers to deliver reliable, 
-                    efficient automation solutions.
-                </p>
-            </div>
+<!-- Technology Partners Section -->
+<div class="row justify-content-center mb-5">
+    <div class="col-12 col-lg-10 col-xl-8">
+        <div class="text-center mb-4">
+            <h2 class="section-title center d-inline-block pb-3">Technology Partners</h2>
+            <p class="lead mx-auto" style="max-width: 600px;">Working with industry leaders to deliver reliable automation solutions</p>
         </div>
-        
-        <!-- Schneider Electric Section -->
-        <div class="row align-items-center mb-5">
-            <div class="col-lg-4 text-center mb-4 mb-lg-0">
-                <div class=" rounded-circle d-inline-flex align-items-center justify-content-center p-4"
-                     style="width: 200px; height: 200px;">
-                    <img src="{% static 'companywebsite/images/téléchargement (10).png' %}" 
-                         alt="Schneider Electric" 
-                        style="max-width: 160px; background: white; padding: 10px; border-radius: 8px;">
-                </div>
-            </div>
-            <div class="col-lg-8">
-                <h3>Schneider Electric Solutions</h3>
-                <p class="lead mb-3">
-                     EcoStruxure Machine Expert Specialists
-                </p>
-                <p>
-                    ControlPro specializes in Schneider Electric automation solutions, providing expert programming, 
-                    configuration, and support for their complete product range.
-                </p>
-                
-                <h5 class="mt-4 mb-3">Our Schneider Electric Expertise:</h5>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h6>PLC & Controllers:</h6>
-                        <div class="d-flex flex-wrap gap-2 mt-2">
-                            <span class="badge bg-light text-dark border">Modicon M172</span>
-                            <span class="badge bg-light text-dark border">Modicon M173</span>
-                            <span class="badge bg-light text-dark border">M221/M241</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <h6>Software & Platforms:</h6>
-                        <div class="d-flex flex-wrap gap-2 mt-2">
-                            <span class="badge bg-light text-dark border">EcoStruxure Machine Expert</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Danfoss Section -->
-        <div class="row align-items-center">
-            <div class="col-lg-8">
-                <h3>Danfoss Automation</h3>
-                <p class="lead mb-3">
-                    Specialists in Danfoss Alsmart Design Solutions(Alsmart®)
-                </p>
-                <p>
-                    ControlPro provides complete Danfoss automation solutions for refrigeration and HVAC applications, 
-                    leveraging their advanced control technology for optimal performance and energy efficiency.
-                </p>
-                
-                <h5 class="mt-4 mb-3">Our Danfoss Expertise:</h5>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h6>Refrigeration Controls:</h6>
-                        <div class="d-flex flex-wrap gap-2 mt-2">
-                            <span class="badge bg-light text-dark border">AS-CX06 Lite</span>
-                            <span class="badge bg-light text-dark border">AS-CX06 Mid</span>
-                            <span class="badge bg-light text-dark border">AS-CX06 Mid+</span>
-                            <span class="badge bg-light text-dark border">AS-CX06 Pro</span>
-                            <span class="badge bg-light text-dark border">AS-CX06 Pro+</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <h6>Software & Tools:</h6>
-                        <div class="d-flex flex-wrap gap-2 mt-2">
-                            <span class="badge bg-light text-dark border">Alsmart Design</span>
-                            <span class="badge bg-light text-dark border">CoolSelector2</span>
-                            <span class="badge bg-light text-dark border">Service Tool</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 text-center mt-5 mt-lg-0">
-                <div class=" rounded-circle d-inline-flex align-items-center justify-content-center p-4"
-                     style="width: 200px; height: 200px;">
-                    <img src="{% static 'companywebsite/images/téléchargement (11).png' %}" 
-                         alt="Danfoss" 
-                         style="max-width: 160px; background: white; padding: 10px; border-radius: 8px;">
-                </div>
-            </div>
-        </div>
-        
-        
     </div>
-</section>
+</div>
 
-<!-- Our Process -->
-<section class="py-5">
-    <div class="container">
-        <h2 class="section-title center text-center">Our Automation Process</h2>
+<div class="row justify-content-center g-4 mb-5">
+    <div class="col-12 col-lg-10 col-xl-8">
+        <!-- Schneider Electric -->
+        <div class="card border-primary border-2 mb-4">
+            <div class="card-body p-4 p-md-5">
+                <div class="d-flex flex-column flex-md-row align-items-center">
+                    <div class="text-center mb-4 mb-md-0 me-md-5">
+                        <div class="d-flex justify-content-center align-items-center bg-white p-3 rounded-circle shadow-sm" 
+                             style="width: 130px; height: 130px; border: 2px solid #dee2e6;">
+                            <img src="{% static 'companywebsite/images/téléchargement (10).png' %}" 
+                                 alt="Schneider Electric" 
+                                 style="max-width: 100px; max-height: 80px; width: auto; height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div class="text-center text-md-start">
+                        <h4 class="mb-2">Schneider Electric Solutions</h4>
+                        <p class="text-muted mb-3">EcoStruxure Machine Expert Specialists</p>
+                        <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-2">
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">Modicon M172</span>
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">Modicon M173</span>
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">M221/M241</span>
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">EcoStruxure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
-        <div class="row mt-5">
-            <div class="col-lg-3 col-md-6">
-                <div class="automation-process process-1 mb-4 mb-md-0">
-                    <h5>Consultation & Analysis</h5>
-                    <p class="text-muted">Understanding your requirements and system analysis</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="automation-process process-2 mb-4 mb-md-0">
-                    <h5>System Design</h5>
-                    <p class="text-muted">Architecture design and component selection</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="automation-process process-3 mb-4 mb-md-0">
-                    <h5>Programming & Integration</h5>
-                    <p class="text-muted">PLC programming, HMI development, and system integration</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="automation-process process-4">
-                    <h5>Commissioning & Support</h5>
-                    <p class="text-muted">Testing, training, and ongoing maintenance support</p>
+        <!-- Danfoss -->
+        <div class="card border-primary border-2">
+            <div class="card-body p-4 p-md-5">
+                <div class="d-flex flex-column flex-md-row align-items-center">
+                    <div class="text-center mb-4 mb-md-0 me-md-5">
+                        <div class="d-flex justify-content-center align-items-center bg-white p-3 rounded-circle shadow-sm" 
+                             style="width: 130px; height: 130px; border: 2px solid #dee2e6;">
+                            <img src="{% static 'companywebsite/images/téléchargement (11).png' %}" 
+                                 alt="Danfoss" 
+                                 style="max-width: 100px; max-height: 80px; width: auto; height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div class="text-center text-md-start">
+                        <h4 class="mb-2">Danfoss Automation</h4>
+                        <p class="text-muted mb-3">Specialists in Alsmart Design Solutions (Alsmart®)</p>
+                        <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-2">
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">AS-CX06 Lite</span>
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">AS-CX06 Lite+</span>
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">AS-CX06 Mid</span>
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">AS-CX06 Mid+</span>
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">AS-CX06 Pro</span>
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">AS-CX06 Pro+</span>
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">Alsmart Design</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
-
+</div>
 {% endblock %}

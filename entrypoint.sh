@@ -9,7 +9,7 @@ echo "Running migrations..."
 python manage.py migrate --noinput
 
 echo "Loading data..."
-python manage.py loaddata data.json
+#python manage.py loaddata data.json
 
 echo "Collecting static files..."
 python manage.py collectstatic --noinput
