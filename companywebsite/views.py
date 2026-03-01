@@ -26,7 +26,7 @@ def services(request):
         'digital_services': service_types.get('digital', []),
         'electrical_services': service_types.get('electrical', []),
         'programming_services': service_types.get('programming', []),
-        'bms_services': bms_services,
+        
     }
     
     return render(request, 'companywebsite/services.html', context)
